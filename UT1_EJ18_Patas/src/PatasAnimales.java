@@ -16,6 +16,13 @@ public class PatasAnimales {
 		System.out.println("¿Y cochinillas?");
 		cochinillasCapturadas = teclado.nextInt();
 		
+		patasHormigas = hormigasCapturadas * 6;
+		patasAranas = aranasCapturadas * 8;
+		patasCochinillas = cochinillasCapturadas * 14;
+		
+		int totalPatas = patasHormigas + patasAranas + patasCochinillas;
+		
+		System.out.println("El número total de patas entre todos los animales es " + totalPatas);
 		
 	}
 
