@@ -12,7 +12,10 @@ public class Comprobacion {
 		System.out.println("¿Has terminado tus tareas? true/false: ");
 		boolean comprobarTareas = sc.nextBoolean();
 		
-		boolean permisoCalle = comprobarTareas && comprobarLluvia;
+		System.out.println("¿Vas a la biblioteca? true/false: ");
+		boolean comprobarBiblioteca = sc.nextBoolean();
+		
+		boolean permisoCalle = comprobarTareas && comprobarLluvia || comprobarBiblioteca;
 		
 		System.out.println("¿Permiso para salir?: " + permisoCalle);
 		
