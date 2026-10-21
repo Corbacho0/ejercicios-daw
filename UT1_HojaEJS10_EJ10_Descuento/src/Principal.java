@@ -17,7 +17,7 @@ public class Principal {
 		if (importe > 50 || socio == true) {
 			System.out.println("¡Te corresponde un descuento!");
 		} else {
-			System.out.println("");
+			System.out.println("No te corresponde un descuento.");
 		}
 	}
 
