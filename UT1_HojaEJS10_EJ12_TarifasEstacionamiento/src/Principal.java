@@ -17,18 +17,21 @@ public class Principal {
 		if (tiempoEstacionado < 1 && tiempoEstacionado > 0) {
 			System.out.println("El estacionamiento es gratuito.");
 		} else {
-			if (tiempoEstacionado > 1 && tiempoEstacionado < 3) {
-				System.out.println("Pagas la tarifa básica");
+			if (tiempoEstacionado > 1 && tiempoEstacionado < 3 && finDeSemana) {
+				 System.out.println("Pagas la tarifa básica + recargo por alta demanda");
 			} else {
-				if (tiempoEstacionado >= 3 && finDeSemana == true) {
-					System.out.println("Pagas la tarifa extendida + recargo por alta demanda.");
+				if (tiempoEstacionado > 1 && tiempoEstacionado < 3) {
+					System.out.println("Pagas la tarifa básica");
 				} else {
-					if (tiempoEstacionado >= 3) {
-						System.out.println("Pagas la tarifa extendida");
+					if (tiempoEstacionado >= 3 && finDeSemana) {
+						System.out.println("Pagas la tarifa extendida + recargo por alta demanda.");
 					} else {
-						System.out.println("No has estado estacionado.");
+						if (tiempoEstacionado >= 3) {
+							System.out.println("Pagas la tarifa extendida");
+						} else {
+							System.out.println("No has estado estacionado.");
+						}
 					}
-				}
 			}
 			
 		}
@@ -36,4 +39,5 @@ public class Principal {
 		
 	}
 
+}
 }
